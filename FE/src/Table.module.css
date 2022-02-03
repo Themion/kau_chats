@@ -1,0 +1,25 @@
+.Table {
+    overflow: auto;
+}
+.chatroom_id {
+    width: 20%;
+}
+.chatroom_name {
+    width: 80%;
+}
+p {
+    text-indent: 10px;
+    margin-bottom: 3px;
+}
+.th, .td {
+    font-size: 14px;
+}
+.tr {
+    line-height: 16px;
+}
+
+.input {
+    height: 2.4rem;
+    font-size: 1rem;
+    margin:1rem;
+}

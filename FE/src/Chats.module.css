@@ -1,0 +1,51 @@
+.chat_room {
+    width: 100%;
+    height: 100%
+}
+
+.title {
+    text-align: center;
+}
+
+.chats {
+    overflow: auto; 
+    word-break: break-all;
+    margin: 0 3rem;
+    border: 3px solid gray;
+    height: max(85%, 3rem);
+}
+
+.chat {
+    margin-bottom: 1rem;
+}
+
+.announce {
+    margin: 0 auto;
+}
+
+.hr {
+    margin: 0px;
+}
+
+.chat_form {
+    position: absolute; 
+    bottom: 0px;
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.chat_input {
+    order: 1;
+    width: 80%
+}
+
+.chat_send {
+    order: 2;
+    width: 20%
+}
+
+.chat_input, .chat_send {
+    margin: 1rem;
+}
