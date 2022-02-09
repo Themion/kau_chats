@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import {
     BrowserRouter as Router,
     Routes,
-    Route
+    Route,
+    Navigate
 } from 'react-router-dom';
 import Table from './Table';
 import Login from './Login';
@@ -15,6 +16,7 @@ ReactDOM.render(
             <Route path="/login" element={<Login />}></Route>
             <Route path="/:id" element={<Chats />}></Route>
             <Route path="/" element={<Table />}></Route>
+            <Route path="*" element={<Navigate to="/" />} />
         </Routes></Router>
     </React.StrictMode>,
     document.querySelector("div#root")

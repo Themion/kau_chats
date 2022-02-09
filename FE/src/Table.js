@@ -25,11 +25,9 @@ function Table() {
     const [newRoomName, setNewRoomName] = useState("")
     const [rooms, setRooms] = useState([])
 
-    socket.emit("init", (room_list) => {
-        room_list.forEach((room) => {
-            setRooms(rooms.join(<Room_Record key={room.id} room={room} />))
-        })
-    })
+    useEffect(() => {
+        socket.emit("init", (rooms) => { setRooms(rooms) })
+    }, [rooms])
 
     return (
         <div>
@@ -45,7 +43,7 @@ function Table() {
                     </tr>
                 </thead>
                 <tbody>
-                    {rooms}
+                    {rooms.map(room => <Room_Record key={room.id} room={room} />)}
                 </tbody>
             </table>
             <form onSubmit={(event) => {
